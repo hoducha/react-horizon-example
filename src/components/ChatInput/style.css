@@ -1,0 +1,10 @@
+#input {
+  margin-bottom:10%;
+}
+
+#input input {
+  height:100px;
+  font-size:5rem;
+  padding:10px;
+  font-family: 'Source Code Pro', "Raleway", "Helvetica Neue";
+}
