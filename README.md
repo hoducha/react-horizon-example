@@ -1,17 +1,17 @@
-# React Horizon
+# React Horizon Demo
 
-A simple realtime chat application created using React and RethinkDB/Horizon
+A demo realtime chat application created using React, Redux and Horizon/RethinkDB
 
-**Note: this is just an experimental project**
+**Note: This is just an experimental project**
 
 ## What’s Inside?
 It is a simple chat application build on top of React and RethinkDB/Horizon and many amazing community projects, such as:
 
 * [create-react-app](https://github.com/facebookincubator/create-react-app) with its dependencies.
-* [webpack](https://webpack.github.io/)
-* [Babel](http://babeljs.io/)
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
-* [ESLint](http://eslint.org/)
+* [React](https://facebook.github.io/react/)
+* [Redux](https://github.com/reactjs/redux/)
+* [Horizon](http://horizon.io/)/[RethinkDB](https://www.rethinkdb.com/)
+* [Express](http://expressjs.com/)
 * and more.
 
 ## Installation
@@ -25,16 +25,40 @@ It is a simple chat application build on top of React and RethinkDB/Horizon and 
   hz init
 ```
 
-## Start the app (development)
-* Start Horizon server
+## Build and run the server
+**Start rethinkdb**
 ```sh
-  hz serve --dev --serve-static ./build
+rethinkdb
 ```
-* Start the application
+RethinkDB Administration Console: http://localhost:8080.
+
+**Build server app**
 ```sh
-  npm run start
+npm run build-server
 ```
-* Test the app at the address: http://localhost:3000. You can test it in different browser tabs/windows.
+
+**Run server app**
+- Development
+```sh
+node ./build/server.js
+```
+- Production
+```sh
+NODE_ENV=production node ./build/server.js
+```
+The default server address is http://localhost:8181. You can change the setting in the src/config.js
+
+## Build and run the client app
+**Development**
+```sh
+npm start
+```
+Visit http://localhost:3000 to see the result. You can test it in different browser instances.
+
+**Production**
+```sh
+npm build
+```
 
 ## Contributing
 
