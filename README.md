@@ -57,7 +57,7 @@ Visit http://localhost:3000 to see the result. You can test it in different brow
 
 **Production**
 ```sh
-npm build
+npm run build
 ```
 
 ## Contributing
